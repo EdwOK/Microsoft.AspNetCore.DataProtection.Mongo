@@ -6,7 +6,7 @@
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<Authors>EdwOK</Authors>
-	<Version>1.0.0</Version>
+	<PackageVersion>1.0.0</PackageVersion>
 	<PackageTags>aspnetcore;dataprotection;mongodb</PackageTags>
 	<PackageProjectUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</RepositoryUrl>
