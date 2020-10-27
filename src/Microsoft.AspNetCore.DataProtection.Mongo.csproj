@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<Description>Support for storing data protection keys in MongoDB.</Description>
-	<TargetFramework>netstandard2.0</TargetFramework>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Authors>EdwOK</Authors>
-	<PackageVersion>1.0.0</PackageVersion>
-	<PackageTags>aspnetcore;dataprotection;mongodb</PackageTags>
-	<PackageProjectUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</RepositoryUrl>
-	<IsPackable>true</IsPackable>
+    <Description>Support for storing data protection keys in MongoDB.</Description>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>EdwOK</Authors>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageTags>aspnetcore;dataprotection;mongodb</PackageTags>
+    <PackageProjectUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EdwOK/Microsoft.AspNetCore.DataProtection.Mongo</RepositoryUrl>
+    <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
