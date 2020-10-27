@@ -5,6 +5,9 @@ using MongoDB.Driver;
 
 namespace Microsoft.AspNetCore.DataProtection.Mongo
 {
+    /// <summary>
+    /// Contains Mongo-specific extension methods for modifying a <see cref="IDataProtectionBuilder"/>.
+    /// </summary>
     public static class MongoDataProtectionExtensions
     {
         /// <summary>
