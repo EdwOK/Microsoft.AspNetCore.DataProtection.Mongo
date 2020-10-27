@@ -12,7 +12,7 @@ namespace Microsoft.AspNetCore.DataProtection.Mongo
     /// </summary>
     public class MongoXmlRepository : IXmlRepository
     {
-        private const string DataProtectionCollectionName = "DataProtectionKeys";
+        private readonly string _collectionName;
 
         private readonly Func<IMongoDatabase> _databaseFactory;
 
@@ -20,16 +20,18 @@ namespace Microsoft.AspNetCore.DataProtection.Mongo
         /// Creates a <see cref="MongoXmlRepository"/> with keys stored at the given directory.
         /// </summary>
         /// <param name="databaseFactory">The delegate used to create <see cref="IMongoDatabase"/> instances.</param>
-        public MongoXmlRepository(Func<IMongoDatabase> databaseFactory)
+        /// <param name="collectionName">The name of the data protections collection.</param>
+        public MongoXmlRepository(Func<IMongoDatabase> databaseFactory, string collectionName)
         {
             _databaseFactory = databaseFactory;
+            _collectionName = collectionName;
         }
 
         /// <inheritdoc />
         public IReadOnlyCollection<XElement> GetAllElements()
         {
             var database = _databaseFactory();
-            var collection = database.GetCollection<string>(DataProtectionCollectionName);
+            var collection = database.GetCollection<string>(_collectionName);
 
             return GetAllElementsCore().ToList().AsReadOnly();
 
@@ -50,7 +52,7 @@ namespace Microsoft.AspNetCore.DataProtection.Mongo
         public void StoreElement(XElement element, string friendlyName)
         {
             var database = _databaseFactory();
-            var collection = database.GetCollection<string>(DataProtectionCollectionName);
+            var collection = database.GetCollection<string>(_collectionName);
 
             collection.InsertOne(element.ToString(SaveOptions.DisableFormatting));
         }
